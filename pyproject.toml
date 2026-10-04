@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkrot"
+dynamic = ["version"]
+description = "Find dead links in Markdown and HTML docs"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Shane"}]
+classifiers = [
+    "Environment :: Console",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+linkrot = "linkrot.cli:main"
+
+[project.urls]
+Source = "https://github.com/Shabfom/linkrot"
+
+[tool.setuptools.dynamic]
+version = {attr = "linkrot.__version__"}
